@@ -1,4 +1,4 @@
-{% set version = '0.4.1' %}
+{% set version = "0.4.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/simpleCache_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/simpleCache/simpleCache_{{ version }}.tar.gz
-  sha256: 9b1609d5fed71676fdbe27ad1ce94ab93eebf8856a04b4717a8d2c0f2f5430df
+  sha256: 9f129c43fa648a882fba3798b0b9e710f9e74b717bcbc9be7e1d30862cc15e7d
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -36,15 +36,11 @@ test:
 about:
   home: https://www.github.com/databio/simpleCache
   license: BSD-2-clause
-  summary: Provides intuitive functions for caching R objects, encouraging reproducible, restartable,
-    and distributed R analysis. The user selects a location to store caches, and then
-    provides  nothing more than a cache name and instructions (R code) for how to produce
-    the R object. Also provides some advanced options like environment assignments,
-    recreating or reloading caches, and cluster compute bindings (using the 'batchtools'
-    package) making it flexible enough for use in large-scale data analysis projects.
+  summary: Provides intuitive functions for caching R objects, encouraging reproducible, restartable, and distributed R analysis. The user selects a location to store caches, and then provides  nothing more than a cache name and instructions (R code) for how to produce the R object. Also provides some advanced options like
+    environment assignments, recreating or reloading caches, and cluster compute bindings (using the 'batchtools' package) making it flexible enough for use in large-scale data analysis projects.
   license_family: BSD
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/BSD_2_clause'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/BSD_2_clause
     - LICENSE
 
 extra:
