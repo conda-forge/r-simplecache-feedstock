@@ -5,11 +5,9 @@ Home: https://www.github.com/databio/simpleCache
 
 Package license: BSD-2-clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-simplecache-feedstock/blob/master/LICENSE.txt)
 
 Summary: Provides intuitive functions for caching R objects, encouraging reproducible, restartable, and distributed R analysis. The user selects a location to store caches, and then provides  nothing more than a cache name and instructions (R code) for how to produce the R object. Also provides some advanced options like environment assignments, recreating or reloading caches, and cluster compute bindings (using the 'batchtools' package) making it flexible enough for use in large-scale data analysis projects.
-
-
 
 Current build status
 ====================
@@ -38,6 +36,7 @@ Installing `r-simplecache` from the `conda-forge` channel can be achieved by add
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `r-simplecache` can be installed with:
@@ -108,9 +107,9 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers
