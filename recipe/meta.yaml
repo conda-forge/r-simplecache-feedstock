@@ -1,6 +1,5 @@
 {% set version = "0.4.2" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-simplecache
@@ -13,8 +12,7 @@ source:
   sha256: 9f129c43fa648a882fba3798b0b9e710f9e74b717bcbc9be7e1d30862cc15e7d
 
 build:
-  merge_build_host: true  # [win]
-  number: 2
+  number: 3
   noarch: generic
   rpaths:
     - lib/R/lib/
