@@ -1,4 +1,4 @@
-{% set version = "0.4.3" %}
+{% set version = "0.5.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/simpleCache_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/simpleCache/simpleCache_{{ version }}.tar.gz
-  sha256: 2f3c88d24363103248472d150824b139791ca7b34b147f78cf9110ec36fa69b4
+  sha256: 31fa9e608dcbecf1bb88ca85308d9ada3c41dad911bc297fdf029659550086da
 
 build:
   number: 0
